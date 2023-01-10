@@ -10,6 +10,7 @@ const UseState = (props) => {
     const [state, setState] = useState(initialState)
     */
     const [count, setCount] = useState(0)
+    const [name, seName] = useState("INICIAL")
 
     return (
 
@@ -33,6 +34,9 @@ const UseState = (props) => {
             </div>
 
             <SectionTitle title="Exercício #02"/>
+            <h1>{name}</h1>
+            <input type="text" className="input" 
+            value = {name} onChange={ e=> seName(e.target.value)}/>
         </div>
     )
 }
