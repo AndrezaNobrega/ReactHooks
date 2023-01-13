@@ -57,3 +57,7 @@ Nesse caso, temos uma função em cache
 ```const [state, dispatch] = useReducer(reducer initialArg, init?)
 ```
 Usado em algo mais complexo ou num contexto mais global dentro da aplicação.
+
+## UseCustom
+
+Estudos de como fazer um hook personalizado
