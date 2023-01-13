@@ -1,6 +1,6 @@
 In the project directory, you can run:
 
-### `npm start`
+### ```npm start```
 
 
 # Tópicos estudados neste projeto:
@@ -44,8 +44,16 @@ Nesse caso, temos uma função em cache
  Quando se tem uma árvore muito grande de componentes, é inviável que essa comunicação seja feita totalmente por meio da comunicação direta/indireta, devido a quantidade de componentes que podem ter entre estes. Traz uma complexidade desnecessária para a aplicação.
 
 
- - Uso no exemplo
+  Uso no exemplo
     --> Criamos um contexto a partir do CreateContext
     --> Importamos ele no nível mais alto da aplicação
             - Assim passamos as informações para todos os componentes
     - Para modificar o valor, precisamos alterar o contexto inteiro.
+
+    -Importante não disponibilizar o setSate para toda a aplicação. Trazer então funções individuais para a alteração desses atributos exclusivamente.
+    -Podemos usar mais de um provider.
+
+## UseReducer
+```const [state, dispatch] = useReducer(reducer initialArg, init?)
+```
+Usado em algo mais complexo ou num contexto mais global dentro da aplicação.

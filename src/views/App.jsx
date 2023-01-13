@@ -5,8 +5,7 @@ import { BrowserRouter as Router } from  'react-router-dom'
 import Menu from '../components/layout/Menu'
 import Content from '../components/layout/Content'
 import DataContext, {data} from '../data/DataContext'
-
-
+import Store from '../data/Store'
 // o dataContext deve ser inicializado com o valor que a gente 
 // passar para toda a aplicação
 
@@ -16,14 +15,16 @@ import DataContext, {data} from '../data/DataContext'
 const App = props => {
     const [state, setState] = useState(data)
     return (
-        <DataContext.Provider value = {{state, setState}}>
-                <div className="App">
-                    <Router>
-                        <Menu />
-                        <Content />
-                    </Router>
-                </div>
-        </DataContext.Provider>
+        <Store>
+            <DataContext.Provider value = {{state, setState}}>
+                    <div className="App">
+                        <Router>
+                            <Menu />
+                            <Content />
+                        </Router>
+                    </div>
+            </DataContext.Provider>
+        </Store>
     )
 }
 
